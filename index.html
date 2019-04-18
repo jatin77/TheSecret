@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Basic Projects</title>
+  </head>
+  <body>
+    <a id="changeBtn">The Secret</a>
+    <div class="quote"></div>
+    <div class="writer">― Rhonda Byrne</div>
+    <script src="app.js"></script>
+    <script>
+      const btn = document.getElementById('changeBtn');
+      btn.addEventListener('click', createQuote);
+      function createQuote() {
+        const randomNum = Math.floor(Math.random() * quotes.length - 1) + 1;
+        const randomQuote = quotes[randomNum].quote;
+        const display = document.querySelector('.quote');
+        display.innerHTML = randomQuote;
+      }
+    </script>
+  </body>
+</html>
